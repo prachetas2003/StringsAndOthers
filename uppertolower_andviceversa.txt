@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+
+string toggle(const string& s){
+	string result="";
+	for(int i =0;s[i]!='\0';i++){
+		int ch = 0;
+		string conv="";
+		if('a'<= s[i] and s[i] <= 'z'){
+			ch = static_cast<int>(s[i]) - static_cast<int>('a');
+			conv = static_cast<char>(static_cast<int>('A') + ch);
+            }
+			else if('A'<= s[i] and s[i]<= 'Z'){
+			ch = static_cast<int>(s[i]) - static_cast<int>('A');
+			conv = static_cast<char>(static_cast<int>('a') + ch);
+		}
+		result+=conv;
+
+	}
+	return result;
+}
+
+int main() {
+	int max = 1000;
+	char arr[max];
+	cin.getline(arr,max);
+	string ans = toggle(arr);
+	cout<<ans;
+    
+
+	return 0;
+}
