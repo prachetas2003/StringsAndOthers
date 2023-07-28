@@ -1,0 +1,13 @@
+#include<iostream>
+using namespace std;
+int main() {
+	int N1;
+	int N2;
+	int N3;
+	cin>>N1>>N2>>N3;
+	for(int i = N1;i<=N2;i=i+N3){
+		int celsius = static_cast<int>((5.0 / 9.0) * (i - 32));
+        cout << i << "	" << celsius << endl;
+	}
+	return 0;
+}

@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+int main() {
+	int n = 0;
+	
+	while(true){
+		
+		int a;
+		cin>>  a;
+		n += a;
+		if(n>=0){
+		cout<<a<<endl;
+		}
+		else{
+			return 0;
+		}
+		
+
+	}
+
+	return 0;
+}

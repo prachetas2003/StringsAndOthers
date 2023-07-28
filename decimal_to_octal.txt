@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N;
+    cin >> N;
+
+    int reversed = 0;
+    while (N > 0) {
+        int digit = N % 8;
+        reversed = reversed * 10 + digit;
+        N = N / 8;
+    }
+
+    int octal = 0;
+    while (reversed > 0) {
+        int digit = reversed % 10;
+        octal = octal * 10 + digit;
+        reversed = reversed / 10;
+    }
+
+    cout << octal << endl;
+
+    return 0;
+}

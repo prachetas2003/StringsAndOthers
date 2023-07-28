@@ -1,0 +1,38 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+bool isPalindrome(char str[], int length) {
+    int left = 0;
+    int right = length - 1;
+
+    while (left < right) {
+        if (str[left] != str[right])
+            return false;
+        left++;
+        right--;
+    }
+
+    return true;
+}
+
+int main() {
+    const int MAX_LENGTH = 1000;
+    char input[MAX_LENGTH];
+
+    cin.getline(input, MAX_LENGTH);
+
+    int length = 0;
+    while (input[length] != '\0') {
+        length++;
+    }
+
+    bool result = isPalindrome(input, length);
+
+    if (result)
+        cout << "true" << endl;
+    else
+        cout << "false" << endl;
+
+    return 0;
+}
