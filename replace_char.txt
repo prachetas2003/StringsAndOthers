@@ -1,0 +1,29 @@
+//Take as input S, a string. Write a function that replaces every even character with the character having just higher ASCII code and every odd character with the character having just lower ASCII code. Print the value returned.
+
+#include <iostream>
+
+std::string replaceCharacters(const std::string& s) {
+    std::string result;
+    for (int i = 0; i < s.length(); i++) {
+        char c = s[i];
+        if (i % 2 == 0) {  // even index
+            c++;
+        } else {  // odd index
+            c--;
+        }
+        result += c;
+    }
+    return result;
+}
+
+int main() {
+    const int maxLength = 1000;
+    char input[maxLength];
+    
+    std::cin.getline(input, maxLength);
+
+    std::string output = replaceCharacters(input);
+    std::cout<< output << std::endl;
+
+    return 0;
+}
